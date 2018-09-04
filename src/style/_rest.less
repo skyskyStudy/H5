@@ -1,0 +1,197 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,html{
+  width:100%;height:100%;
+  margin:0;
+  background:#ffb619;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+  display: inline-block;
+}
+button {
+  border:0 none;
+  background-color:transparent;
+  cursor:pointer
+}
+
+
+// 公共类
+.hide{
+  display:none;
+}
+.clearfix::before, .clearfix::after {
+  content: '.';
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  max-width: 640px;
+  margin: 0 auto;
+  color: #333;
+  -webkit-overflow-scrolling: touch;
+  -webkit-touch-callout: none;
+  font-size: 0.28rem;
+}
+
+.record {
+  background-image: url(../assets/images/myget.png);
+  background-size: 100% 100%;
+}
+.rule {
+  background-image: url(../assets/images/rule.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.point {
+  background-image: url('../assets/images/point.png') !important;
+  background-size: 100% 100%;
+}
+#circle {
+  background-image: url(../assets/images/rotate_in.png);
+  background-size: 100% 100%;
+}
+
+.corona-group.default {
+  background-image: url(../assets/images/radius-1.png)
+}
+
+.corona-group.toggle {
+  background-image: url(../assets/images/radius-2.png)
+}
+
+.corona-group.end {
+  background-image: url(../assets/images/radius-3.png)
+}
+
+#start {
+  background-image: url(../assets/images/start.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.rotate_box {
+  animation: Rotate 18s linear infinite;
+  -webkit-animation: Rotate 18s linear infinite;
+  transform: origin(50%, 50%);
+}
+// 旋转动画
+@keyframes Rotate {
+  from {
+    transform: rotate(0deg) ;
+    -webkit-transform: rotate(0deg) ;
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+// 旋转动画
+@-webkit-keyframes Rotate {
+  from {
+    transform: rotate(0deg) ;
+    -webkit-transform: rotate(0deg) ;
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+// 奖励列表
+.get-record {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  background-color: #fff;
+  z-index: 10;
+}
+.record-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  font-size: 0.3rem;
+  color: #333;
+  z-index: 10;
+}
+.gogo {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); /* Safari 和 Chrome */
+}
+.items {
+margin-top: 0.8rem;
+}
+.item {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  padding: 0.23rem;
+  border-top: solid #eee 1px;
+  background-color: #fff;
+  img {
+    width: 2.08rem;
+    height: 1.28rem;
+    margin-right: 0.29rem;
+    float: left;
+  }
+  .item-info {
+    float: left;
+    span {
+      font-size: 0.28rem;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+  .item-title {
+    font-size: 0.32rem;
+    font-weight: 400;
+    overflow: hidden;
+    width: 9em;
+    height: 1em;
+    margin-top: 0.14rem;
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+}
+.item:active {
+  background-color: #f1f1f1;
+}
+
+
